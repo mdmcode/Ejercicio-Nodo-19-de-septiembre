@@ -23,19 +23,21 @@ public class Main {
             int random = (int) (Math.random() * 3);
             switch (condiciones[random]) {
                 case "Soleado":
-                    System.out.println("Día " + (i + 1) + ": " + soleado.getCondicion() + " en " + ciudad + " con una temperatura de " + soleado.getTemperatura() + "°C y una humedad de " + soleado.getHumedad() + "%");
+                    System.out.println("\nDía " + (i + 1) + ": " + soleado.getCondicion() + " en " + ciudad + " con una temperatura de " + soleado.getTemperatura() + "°C y una humedad de " + soleado.getHumedad() + "%");
                     break;
                 case "Lluvioso":
-                    System.out.println("Día " + (i + 1) + ": " + lluvioso.getCondicion() + " en " + ciudad + " con una temperatura de " + lluvioso.getTemperatura() + "°C y una humedad de " + lluvioso.getHumedad() + "%");
+                    System.out.println("\nDía " + (i + 1) + ": " + lluvioso.getCondicion() + " en " + ciudad + " con una temperatura de " + lluvioso.getTemperatura() + "°C y una humedad de " + lluvioso.getHumedad() + "%");
                     break;
                 case "Nevado":
-                    System.out.println("Día " + (i + 1) + ": " + nevado.getCondicion() + " en " + ciudad + " con una temperatura de " + nevado.getTemperatura() + "°C y una humedad de " + nevado.getHumedad() + "%");
+                    System.out.println("\nDía " + (i + 1) + ": " + nevado.getCondicion() + " en " + ciudad + " con una temperatura de " + nevado.getTemperatura() + "°C y una humedad de " + nevado.getHumedad() + "%");
                     break;
             }
 
-            // Esperar 3 segundos
-            System.out.println("...");
-            Thread.sleep(3000);
+            // Esperar 5 segundos
+            for(int j = 0; j < 5; j++){
+                System.out.print(".");
+                Thread.sleep(1000);
+            }
         }
     }
 }
